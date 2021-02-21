@@ -1,18 +1,18 @@
 version: '3.3'
 services:
   master:
-    image: sayuio/crawlab-scrapy:latest
+    image: sayuio/crawlab-scrapy:v1
     container_name: master
     environment:
       # CRAWLAB_API_ADDRESS: "https://<your_api_ip>:<your_api_port>"  # backend API address 后端 API 地址. 适用于 https 或者源码部署
-      CRAWLAB_SERVER_MASTER: "Y"  # whether to be master node 是否为主节点，主节点为 Y，工作节点为 N
+      CRAWLAB_SERVER_MASTER: "N"  # whether to be master node 是否为主节点，主节点为 Y，工作节点为 N
       CRAWLAB_MONGO_HOST: "106.55.41.93"  # MongoDB host address MongoDB 的地址，在 docker compose 网络中，直接引用服务名称
       CRAWLAB_MONGO_PORT: "27017"  # MongoDB port MongoDB 的端口
       CRAWLAB_MONGO_DB: "crawl_test"  # MongoDB database MongoDB 的数据库
       CRAWLAB_MONGO_USERNAME: "rain"  # MongoDB username MongoDB 的用户名
       CRAWLAB_MONGO_PASSWORD: "rain"  # MongoDB password MongoDB 的密码
       # CRAWLAB_MONGO_AUTHSOURCE: "admin"  # MongoDB auth source MongoDB 的验证源
-      CRAWLAB_REDIS_ADDRESS: "106.55.41.93"  # Redis host address Redis 的地址，在 docker compose 网络中，直接引用服务名称
+      CRAWLAB_REDIS_ADDRESS: "159.75.122.172"  # Redis host address Redis 的地址，在 docker compose 网络中，直接引用服务名称
       CRAWLAB_REDIS_PORT: "6379"  # Redis port Redis 的端口
       CRAWLAB_REDIS_DATABASE: "0"  # Redis database Redis 的数据库
       CRAWLAB_REDIS_PASSWORD: "xG5Pq4jSxRCZe0Mn"  # Redis password Redis 的密码
@@ -29,7 +29,7 @@ services:
       # CRAWLAB_SERVER_LANG_GO: "Y"  # whether to pre-install Golang 预安装 Golang 语言环境
       # CRAWLAB_SETTING_ALLOWREGISTER: "N"  # whether to allow user registration 是否允许用户注册
       # CRAWLAB_SETTING_ENABLETUTORIAL: "N"  # whether to enable tutorial 是否启用教程
-      CRAWLAB_SETTING_RUNONMASTER: "Y"  # whether to run on master node 是否在主节点上运行任务
+      CRAWLAB_SETTING_RUNONMASTER: "N"  # whether to run on master node 是否在主节点上运行任务
       # CRAWLAB_SETTING_DEMOSPIDERS: "Y"  # whether to init demo spiders 是否使用Demo爬虫
       # CRAWLAB_SETTING_CHECKSCRAPY: "Y"  # whether to automatically check if the spider is scrapy 是否自动检测爬虫为scrapy
       # CRAWLAB_NOTIFICATION_MAIL_SERVER: smtp.exmaple.com  # STMP server address STMP 服务器地址

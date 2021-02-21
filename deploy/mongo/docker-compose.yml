@@ -3,8 +3,8 @@ services:
   mongo-db: # 相关文档 https://hub.docker.com/_/mongo
     container_name: mongo-db
     # environment:
-      # - MONGO_INITDB_ROOT_USERNAME=rain
-      # - MONGO_INITDB_ROOT_PASSWORD=rain
+      # - MONGO_INITDB_ROOT_USERNAME=lNhOii&W6TD&PLgm!@Bla@k&^#zs%Anv
+      # - MONGO_INITDB_ROOT_PASSWORD=lNhOii&W6TD&PLgm!@Bla@k&^#zs%Anv
     build:
       context: .
       args:
